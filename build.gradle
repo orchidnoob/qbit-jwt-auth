@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     compile "org.springframework:spring-context:${springVersion}"
-    compile 'io.advantageous.qbit:qbit-admin:0.9.0.M2'
+    compile "io.advantageous.qbit:qbit-admin:${qbitVersion}"
 
     compile "org.aspectj:aspectjrt:${aspectjVersion}"
     compile "org.aspectj:aspectjtools:${aspectjVersion}"
