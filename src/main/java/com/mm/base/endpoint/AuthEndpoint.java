@@ -14,18 +14,19 @@ public class AuthEndpoint {
     }
 
     @Secured(permission = "p1", role = "r1")
-    @RequestMapping(value = "token", method = RequestMethod.GET)//POST)
-    public void token() {
+    @RequestMapping(value = "token", method = RequestMethod.GET, description="Get login token")
+    public String token() {
         System.out.println("login");
+        return "Sample token: XXXXXXXXXXXXXXXXX";
     }
 
-    @RequestMapping(value = "refresh", method = RequestMethod.GET)
+    @RequestMapping(value = "refresh", method = RequestMethod.GET, description="Refresh token")
     public void refresh() {
         System.out.println("refresh");
     }
 
     @Secured(permission = "p1", role = "r1")
-    @RequestMapping(value = "logout", method = RequestMethod.GET)
+    @RequestMapping(value = "logout", method = RequestMethod.GET, description="Logout")
     public void logout() {
         System.out.println("logout");
     }
